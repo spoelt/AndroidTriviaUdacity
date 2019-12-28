@@ -21,6 +21,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'androidx.navigation.safeargs'
+
 android {
     compileSdkVersion 28
     dataBinding {
@@ -50,11 +52,13 @@ dependencies {
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version_kotlin"
 
+    kapt 'androidx.databinding:databinding-compiler-common:3.4.0'
+
     // Constraint Layout
     implementation "androidx.constraintlayout:constraintlayout:$version_constraint_layout"
 
     // Core
-    implementation "androidx.core:core:$version_core"
+    implementation "androidx.core:core:1.1.0"
 
     // Material Design
     implementation "com.google.android.material:material:$version_material"
